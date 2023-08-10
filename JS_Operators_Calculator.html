@@ -1,0 +1,348 @@
+<!---JS_Operators_Calculators--->
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+	body{
+		background-image: url("https://media.istockphoto.com/id/1419844586/vector/stem-blue-horizontal-frame-vector-education-bright-illustration.jpg?s=612x612&w=0&k=20&c=-A1eYLYulujNsiM26lkVy7qMT_Hp82N5EtKHSFRmigk=");
+		background-repeat:no repeat;
+		background-size:cover;
+		background-attachment:fixed;
+	}
+	ul{
+		position:absolute;
+		top:5vh;
+		left:50vh;
+		list-style:none;
+		border:5px solid green;
+		width:50%;
+		text-align:center;
+		padding-left:0px;
+		background:#DC7633;
+		border-radius:40px;
+	}
+	li{
+		border-bottom:3px solid red;
+		padding:10px 0px 10px 0px;
+	}
+	input{
+		color:#F2F3F4;
+		background:#1C2833;
+		border-radius:40px;
+		padding: 10px 10px 10px 10px;
+	}
+	.l1{
+		margin:0px 100px 0px 0px;
+	}
+	.l2{
+		margin:0px 0px 0px 100px;
+	}
+	.l3{
+		margin:0px 150px 0px 0px;
+	}
+	.l4{
+		margin:0px 0px 0px 150px;
+	}
+
+
+</style>
+<body>
+	<ul>
+		<li style="font-size:30px;color:#1A5276;"><b> SIMPLE CALCULATOR</b></li>
+		<li><input  style="margin:10px 180px 10px 0px;" type="text" id="n1" placeholder="Enter the number1" /><input type="text" id="n2" placeholder="Enter Number2"/></li>
+		<li><input type="text" id="n" placeholder="Output"/></li>
+		<li><a href="file:///C:/D_Drive/Fellowship/JS/Assignments/JS_Conditional_Statement/JS_Operators_Calculator.html"><input style="margin:0px 250px 0px 0px;" type="button" id="btnac" value="AC"/><input type="button" id="btnclr" value="Clear"/></a></li>
+
+		<li> <input class="l1" type="button" id="add" value="+"/><input type="button" id="sub" value="-"/><input class="l2" type="button" id="mul" value="*"/></li>
+
+		<li> <input class="l3" type="button" id="div" value="/"/><input type="button" id="mod" value="%"/><input class="l4" type="button" id="inc" value="++"/></li>
+
+		<li> <input class="l1" type="button" id="dec" value="--"/><input type="button" id="eql" value="=="/><input class="l2" type="button" id="ide" value="==="/></li>
+
+		<li> <input class="l3" type="button" id="neq" value="!="/><input type="button" id="nide" value="!=="/><input class="l4" type="button" id="gtr" value=">"/></li>
+
+		<li> <input class="l1" type="button" id="gtreql" value=">="/><input type="button" id="les" value="<"/><input class="l2" type="button" id="leseql" value="<="/></li>
+
+		<li> <input class="l3" type="button" id="band" value="&"/><input type="button" id="bor" value="|"/><input class="l4" type="button" id="bxor" value="^"/></li>
+
+		<li> <input class="l1" type="button" id="bnot" value="~"/><input type="button" id="bls" value="<<"/><input class="l2" type="button" id="brs" value=">>"/></li>
+
+		<li> <input class="l3" type="button" id="brsz" value=">>>"/><input type="button" id="land" value="&&"/><input class="l4" type="button" id="lor" value="||"/></li>
+
+		<li> <input class="l1" type="button" id="lnot" value="!"/><input  class="l2" type="button" id="pow" value="**"/></li>
+		<p> Designed By: Uday Kumar J B</p>
+
+
+	</ul>
+		
+</body>
+</html>
+<script>
+		
+		document.getElementById("add").onclick=function()
+		{
+		  	var number1=parseInt(document.getElementById("n1").value);
+			var number2=parseInt(document.getElementById("n2").value);
+			number=number1+number2;
+			document.getElementById("n").value=number;
+		}
+
+		
+		
+		document.getElementById("sub").onclick=function()
+		{
+		  	var number1=parseInt(document.getElementById("n1").value);
+			var number2=parseInt(document.getElementById("n2").value);
+			number=number1-number2;
+			document.getElementById("n").value=number;
+		}
+
+	
+		document.getElementById("mul").onclick=function()
+		{
+		  	var number1=parseInt(document.getElementById("n1").value);
+			var number2=parseInt(document.getElementById("n2").value);
+			number=number1*number2;
+			document.getElementById("n").value=number;
+		}		
+
+	
+		document.getElementById("div").onclick=function()
+		{
+		  	var number1=parseInt(document.getElementById("n1").value);
+			var number2=parseInt(document.getElementById("n2").value);
+			number=number1/number2;
+			document.getElementById("n").value=number;
+		}
+
+
+	
+		document.getElementById("mod").onclick=function()
+		{
+		  	var number1=parseInt(document.getElementById("n1").value);
+			var number2=parseInt(document.getElementById("n2").value);
+			number=number1%number2;
+			document.getElementById("n").value=number;
+		}	
+
+
+	
+		document.getElementById("inc").onclick=function()
+		{
+		  	var number1=parseInt(document.getElementById("n1").value);
+			number=number1++;
+			document.getElementById("n").value=number1++;
+		}
+
+
+	
+		document.getElementById("dec").onclick=function()
+		{
+		  	var number1=parseInt(document.getElementById("n1").value);
+			number=number1--;
+			document.getElementById("n").value=number1--;
+		}
+
+
+
+		document.getElementById("eql").onclick=function()
+		{
+		  	var number1=parseInt(document.getElementById("n1").value);
+			var number2=parseInt(document.getElementById("n2").value);
+			number=(number1==number2);
+			document.getElementById("n").value=number;
+		}		
+	
+
+	
+		document.getElementById("ide").onclick=function()
+		{
+		  	var number1=parseInt(document.getElementById("n1").value);
+			var number2=parseInt(document.getElementById("n2").value);
+			number=(number1===number2);
+			document.getElementById("n").value=number;
+		}
+
+
+
+	
+		document.getElementById("neq").onclick=function()
+		{
+		  	var number1=parseInt(document.getElementById("n1").value);
+			var number2=parseInt(document.getElementById("n2").value);
+			number=(number1!=number2);
+			document.getElementById("n").value=number;
+		}
+
+		
+	
+		document.getElementById("nide").onclick=function()
+		{
+		  	var number1=parseInt(document.getElementById("n1").value);
+			var number2=parseInt(document.getElementById("n2").value);
+			number=(number1!==number2);
+			document.getElementById("n").value=number;
+		}
+
+
+
+	
+		document.getElementById("gtr").onclick=function()
+		{
+		  	var number1=parseInt(document.getElementById("n1").value);
+			var number2=parseInt(document.getElementById("n2").value);
+			number=(number1>number2);
+			document.getElementById("n").value=number;
+		}	
+
+
+	
+		document.getElementById("gtreql").onclick=function()
+		{
+		  	var number1=parseInt(document.getElementById("n1").value);
+			var number2=parseInt(document.getElementById("n2").value);
+			number=(number1>=number2);
+			document.getElementById("n").value=number;
+		}
+
+
+	
+		document.getElementById("les").onclick=function()
+		{
+		  	var number1=parseInt(document.getElementById("n1").value);
+			var number2=parseInt(document.getElementById("n2").value);
+			number=(number1<number2);
+			document.getElementById("n").value=number;
+		}
+
+
+	
+		document.getElementById("leseql").onclick=function()
+		{
+		  	var number1=parseInt(document.getElementById("n1").value);
+			var number2=parseInt(document.getElementById("n2").value);
+			number=(number1<=number2);
+			document.getElementById("n").value=number;
+		}	
+
+
+
+		document.getElementById("band").onclick=function()
+		{
+		  	var number1=parseInt(document.getElementById("n1").value);
+			var number2=parseInt(document.getElementById("n2").value);
+			number=(number1&number2);
+			document.getElementById("n").value=number;
+		}	
+
+
+	
+		document.getElementById("bor").onclick=function()
+		{
+		  	var number1=parseInt(document.getElementById("n1").value);
+			var number2=parseInt(document.getElementById("n2").value);
+			number=(number1|number2);
+			document.getElementById("n").value=number;
+		}	
+
+
+	
+		document.getElementById("bxor").onclick=function()
+		{
+		  	var number1=parseInt(document.getElementById("n1").value);
+			var number2=parseInt(document.getElementById("n2").value);
+			number=(number1^number2);
+			document.getElementById("n").value=number;
+		}
+
+
+	
+		document.getElementById("bnot").onclick=function()
+		{
+		  	var number1=parseInt(document.getElementById("n1").value);
+			number=(~number1);
+			document.getElementById("n").value=number;
+		}
+
+
+	
+		document.getElementById("bls").onclick=function()
+		{
+		  	var number1=parseInt(document.getElementById("n1").value);
+			var number2=parseInt(document.getElementById("n2").value);
+			number=(number1<<number2);
+			document.getElementById("n").value=number;
+		}	
+
+
+
+	
+		document.getElementById("brs").onclick=function()
+		{
+		  	var number1=parseInt(document.getElementById("n1").value);
+			var number2=parseInt(document.getElementById("n2").value);
+			number=(number1>>number2);
+			document.getElementById("n").value=number;
+		}	
+
+
+	
+		document.getElementById("brsz").onclick=function()
+		{
+		  	var number1=parseInt(document.getElementById("n1").value);
+			var number2=parseInt(document.getElementById("n2").value);
+			number=(number1>>>number2);
+			document.getElementById("n").value=number;
+		}
+
+
+
+	
+		document.getElementById("land").onclick=function()
+		{
+		  	var number1=parseInt(document.getElementById("n1").value);
+			var number2=parseInt(document.getElementById("n2").value);
+			number=(number1&&number2);
+			document.getElementById("n").value=number;
+		}		
+	
+
+
+
+
+	
+		document.getElementById("lor").onclick=function()
+		{
+		  	var number1=parseInt(document.getElementById("n1").value);
+			var number2=parseInt(document.getElementById("n2").value);
+			number=(number1||number2);
+			document.getElementById("n").value=number;
+		}		
+	
+
+
+
+	
+		document.getElementById("lnot").onclick=function()
+		{
+		  	var number1=parseInt(document.getElementById("n1").value);
+			number=!!number1;
+			document.getElementById("n").value=number;
+		}		
+	
+
+
+
+	
+		document.getElementById("pow").onclick=function()
+		{
+		  	var number1=parseInt(document.getElementById("n1").value);
+			var number2=parseInt(document.getElementById("n2").value);
+			number=(number1**number2);
+			document.getElementById("n").value=number;
+		}		
+	
+		
+
+</script>
+
